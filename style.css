@@ -1,0 +1,76 @@
+body{
+  background-color:#1f2527;
+  color:#fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+#header{
+  width:100%;
+}
+
+#header > img{
+  width:6vw;
+  display:inline-block;
+}
+#header > h1{
+  display:inline-block;
+  margin-left:5vmin;
+}
+
+a{
+  color:#fff;
+  text-decoration:none;
+}
+
+p{
+  font-size:150%;
+}
+
+#menu{
+  display:inline-block;
+}
+
+#menu a{
+  vertical-align: middle;
+  font-size:200%;
+  margin-left:5vw;
+}
+
+#portfolio{
+  width:80vw;
+  margin-left:10vw;
+}
+
+
+.portfolioItem{
+  width:100%;
+  border-top: 1.5px #fff solid;
+  border-bottom: 1.5px #fff solid;
+}
+
+.portfolioItem img:first-child{
+  width:50%;
+  float: left;
+}
+
+
+.portfolioItem img{
+  width:30%;
+  vertical-align: top;
+  margin-bottom:20px;
+  margin-right:20px;
+  float: left;
+}
+
+.portfolioItem p{
+  vertical-align:middle;
+  display:inline-block;
+}
+
+.numberHeader{
+  font-size:300%;
+  position:absolute;
+  text-shadow: 1px 1px #fff;
+  right:15vmin;
+  margin-top:-7vh;
+}

@@ -1,0 +1,14 @@
+.portfolioItem img:first-child{
+
+}
+
+
+.portfolioItem img:not(:first-child){
+  display:none;
+}
+
+
+
+.comments {
+  display:none;
+}
