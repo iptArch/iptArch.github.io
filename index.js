@@ -5,7 +5,7 @@ var colors=["#23c1e3","#f58240","#ed028c","#c4d830","#fff101","#ff382d"];
 
 sd = new showdown.Converter(),
 renderPortfolio();
-cosnole.log("v 1.0.0");
+console.log("v 1.0.0");
 
 
 async function renderPortfolio(){
