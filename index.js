@@ -5,7 +5,7 @@ var colors=["#23c1e3","#f58240","#ed028c","#c4d830","#fff101","#ff382d"];
 
 sd = new showdown.Converter(),
 renderPortfolio();
-console.log("v 1.0.0");
+console.log("v1.0");
 
 
 async function renderPortfolio(){
@@ -35,13 +35,13 @@ async function renderPortfolioItem(data,i){
   if(i<10){
     num="0"+i;
   }
-  console.log(data)
+  //console.log(data)
   if(data.state!="open"){
     return "";
   }
   html=sd.makeHtml(data.body);
   let response = await fetch(data.comments_url).then(x=>x.json());
-  console.log(data.comments_url,response);
+  //console.log(data.comments_url,response);
   comments=response.map(x=>sd.makeHtml(x.body));
   var commentsHTML=comments.reduce((acc,cur)=>acc+cur,"");
   if(PARAMS.id){
