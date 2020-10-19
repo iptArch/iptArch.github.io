@@ -5,14 +5,13 @@ var colors=["#23c1e3","#f58240","#ed028c","#c4d830","#fff101","#ff382d"];
 
 sd = new showdown.Converter(),
 renderPortfolio();
-
+cosnole.log("v 1.0.0");
 
 
 async function renderPortfolio(){
   fetch("https://api.github.com/repos/zakerytclarke/ipt/issues")
     .then(x=>x.json())
     .then(async function(data){
-      console.log(data);
       out=[];
       for(var i=0;i<data.length;i++){
         if(PARAMS.id){
