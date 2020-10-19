@@ -67,10 +67,73 @@ p{
   display:inline-block;
 }
 
+.portfolioItem > h2{
+  vertical-align:middle;
+  display:inline-block;
+  width:73vw;
+}
+.portfolioItem > span{
+  vertical-align:middle;
+}
+
+
 .numberHeader{
   font-size:300%;
-  position:absolute;
   text-shadow: 1px 1px #fff;
-  right:15vmin;
   margin-top:-7vh;
+  width:10vw;
+}
+
+#mobileHeader{
+  display:none;
+}
+
+#mobileHeader > img{
+  margin-left:10vw;
+  width:10vw;
+  display:inline-block;
+}
+#mobileHeader > h1{
+  display:inline-block;
+  margin-left:5vmin;
+}
+
+
+#menuButton{
+  font-size:10vw;
+  vertical-align: middle;
+  margin-left:3vw;
+}
+
+
+#mobileMenu{
+  display:none;
+  text-align: center;
+  width:100%;
+}
+
+
+
+#mobileMenu a{
+  vertical-align: middle;
+  font-size:200%;
+}
+
+
+@media (orientation:portrait){
+
+  body{
+    font-size:200%;
+  }
+
+  #header{
+    display:none;
+  }
+  #mobileHeader{
+    display:block;
+  }
+  .portfolioItem > h2{
+    width:65vw;
+  }
+
 }

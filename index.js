@@ -45,14 +45,25 @@ async function renderPortfolioItem(data,i){
   console.log(data.comments_url,response);
   comments=response.map(x=>sd.makeHtml(x.body));
   var commentsHTML=comments.reduce((acc,cur)=>acc+cur,"");
-  return `<a href="./project.html?id=${data.id}">
-            <div class="portfolioItem">
-              <h2>${data.title||""}</h2>
-              <span class="numberHeader" style="color:${colors[i%colors.length]}"><b><i>${num}</i></b></span>
-              ${html}
-              <div class="comments">${commentsHTML}</div>
-            </div>
-          </a>`;
+  if(PARAMS.id){
+    return `
+              <div class="portfolioItem">
+                <h2>${data.title||""}</h2>
+                <span class="numberHeader" style="color:${colors[i%colors.length]}"><b><i>${num}</i></b></span>
+                ${html}
+                <div class="comments">${commentsHTML}</div>
+              </div>
+            `;
+  }else{
+    return `<a href="./project.html?id=${data.id}">
+              <div class="portfolioItem">
+                <h2>${data.title||""}</h2>
+                <span class="numberHeader" style="color:${colors[i%colors.length]}"><b><i>${num}</i></b></span>
+                ${html}
+                <div class="comments">${commentsHTML}</div>
+              </div>
+            </a>`;
+  }
 
 }
 
@@ -64,4 +75,16 @@ function getParams(){
     out[x[0]]=x[1];
   })
   return out;
+}
+
+
+
+function mobileMenu(){
+  if(document.getElementById("menuButton").innerHTML=="close"){//Opened
+    document.getElementById("menuButton").innerHTML="menu";
+    document.getElementById("mobileMenu").style.display="none";
+  }else{//Closed
+    document.getElementById("menuButton").innerHTML="close";
+    document.getElementById("mobileMenu").style.display="block";
+  }
 }
