@@ -31,8 +31,8 @@ async function renderPortfolio(){
 
 
 async function renderPortfolioItem(data,i){
-  var num=i;
-  if(i<10){
+  var num=i+1;
+  if(num<10){
     num="0"+i;
   }
   //console.log(data)
