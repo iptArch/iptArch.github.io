@@ -33,7 +33,7 @@ async function renderPortfolio(){
 async function renderPortfolioItem(data,i){
   var num=i+1;
   if(num<10){
-    num="0"+i;
+    num="0"+num;
   }
   //console.log(data)
   if(data.state!="open"){
