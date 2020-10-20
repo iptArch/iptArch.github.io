@@ -9,7 +9,7 @@ console.log("v1.0");
 
 
 async function renderPortfolio(){
-  fetch("https://api.github.com/repos/zakerytclarke/ipt/issues")
+  fetch("https://api.github.com/repos/iptArch/iptArch.github.io/issues")
     .then(x=>x.json())
     .then(async function(data){
       out=[];
